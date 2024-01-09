@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    Today: <input type="text" id="today" onkeyup="myFuntion()">
+    <br>
+    Display:<label type="text" id="display" onkeyup="myFuntion()">
+        <span id="demo"></span>
+        <script>
+            function myFuntion() {
+                var x = parseInt(document.getElementById("today").value);
+                if (x == 1) {
+                    document.getElementById("display").innerHTML = "chu nhat"
+                } else if (x == 2) {
+
+                    document.getElementById("display").innerHTML = "thu 2"
+                } else if (x == 3) {
+
+                    document.getElementById("display").innerHTML = "thu 3"
+                } else if (x == 4) {
+
+                    document.getElementById("display").innerHTML = "thu 4"
+                } else if (x == 5) {
+
+                    document.getElementById("display").innerHTML = "thu 5"
+                } else if (x == 6) {
+
+                    document.getElementById("display").innerHTML = "thu 6"
+                } else if (x == 7) {
+
+                    document.getElementById("display").innerHTML = "thu 7"
+                } else {
+
+                    document.getElementById("display").innerHTML = "Khong hop le"
+                }
+
+            }
+        </script>
+
+</body>
+
+</html>

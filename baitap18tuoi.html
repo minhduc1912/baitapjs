@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./main.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<script>
+// nhap ngay thang nam sinh
+let ngaySinh = prompt("Nhập ngày tháng năm sinh (dd/mm/yyyy): ");
+let ngay = ngaySinh.split("/")[0]; //su dung split de tach ngay ra khoi ngaySinh roi luu vao ngay
+let thang = ngaySinh.split("/")[1];//su dung split de tach thang ra khoi ngaySinh roi luu vao thang
+let nam = ngaySinh.split("/")[2];//su dung split de tach nam ra khoi ngaySinh roi luu vao nam
+// tinh toan
+let namHienTai = new Date().getFullYear();
+let tuoi = namHienTai - nam;
+
+// kiem tra
+if (tuoi >= 18) {
+  alert("Đi xem phim nhà bà Nữ");
+} else {
+  alert("Ở nhà coi Doreamon");
+}
+</script>
+
+</body>
+</html>
