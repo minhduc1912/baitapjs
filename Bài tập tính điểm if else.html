@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Input Student Name : <input type="text" id="studentName"> <br>
+    Input Score: <input type="number" id="score">
+    <button onclick="grade()">Define Grade</button>
+    <p id="str_grade"></p>
+    <script>
+        function grade(score,name) {
+            var name = document.getElementById("studentName").value;
+            var score = document.getElementById("score").value;
+            var string_grade;
+            if (score >= 0 && score <= 100) {
+                if (score > 90) {
+                    string_grade = "Excellent";
+                } else if (score > 80) {
+                    string_grade = "Very good";
+                } else if (score > 60) {
+                    string_grade = "Fair";
+                } else if (score >= 50) {
+                    string_grade = "Medium";
+                } else {
+                    string_grade = "Fail";
+                }
+            } else {
+                string_grade = "Score must be between 0 and 100";
+            }
+             document.getElementById("str_grade").innerHTML = name + "'s grade is " + score + "<br>" + string_grade;
+        
+        }
+    </script>
+</body>
+
+</html>
