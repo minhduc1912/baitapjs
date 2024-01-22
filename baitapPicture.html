@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    
+  </head>
+  <body>
+
+    <form action="" class="fclass" name="frm">
+      <p class="first">
+        Product Name:
+        <input type="text" name="pname" id="pname" />
+      </p>
+      <p class="first">
+        Product Picture:
+        <input type="file" name="phone" id="upimg"  />
+      </p>
+      <p class="first">
+        Product Price:
+        <input type="text" name="price" id="pprice" />
+      </p>
+    </form>
+
+    <button type="button" id="up-btn" onclick="add()">Add</button>
+    <p class="ptag">ĐIỆN THOẠI NỔI BẬT NHẤT</p>
+    <img src="" id="choosenImg" />
+
+    <p id="displayName"></p>
+    <p id="displayPrice"></p>
+
+    <button type="button" id="sub-btn">Submit</button>
+    <script>
+
+      const add = () =>
+       {
+        var pname = frm.pname.value
+        var price = frm.price.value
+        var upimg = document.getElementById('upimg')
+        var choosenImg = document.getElementById('choosenImg')
+        var reader = new FileReader()
+        reader.readAsDataURL(upimg.files[0])
+        reader.onload = () => {
+          choosenImg.setAttribute('src', reader.result)
+          choosenImg.setAttribute('class', 'image')
+        }
+        document.getElementById('displayName').innerHTML = pname
+        document.getElementById('displayPrice').innerHTML = `${price}đ`
+      }
+    </script>
+  </body>
+</html>

@@ -18,11 +18,13 @@
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
+                <option value="4">4</option>
             </select> <br>
              Summary :
-             <input type="text" id="sum" value="" > <br>
+             <input type="text" id="tb" value="" > <br>
              <input type="button" onclick="functionOK()" value="OK">
              <input type="button" onclick="functionCancel()" value="Cancel">
+            <p id="kq"></p>
     </form>
 
     <script>
@@ -32,28 +34,72 @@
             var hk2 = parseInt(document.getElementById("s2").value);
             var y = document.getElementById("year");
             var value = y[y.selectedIndex].value;
+            var tb;
+    
+            switch(year)
+            {
+                case 1:
+                    tb = (hk1 + hk2)/2;
+                    break;
+                case 2:
+                    tb = (hk1 + hk2*2)/3;
+                    break;
+                case 3: 
+                
+                    tb = (hk1 + hk2*3)/4;
+                    break;
+                case 4:
+                    tb = (hk1 + hk2 * 4)/5;  
+                    break;
+            }
+            document.getElementById("tb").value = tb;
 
-            var result;
-            if(value == 1)
-            {
-                result = ((hk1+(hk2*3))/3);
-            }
-            else if (value == 2)
-            {
-                result = ((hk1+(hk2*3))/4);
-            }
-            else if (value == 3)
-            {
-                result = ( (hk1 + (hk2*4))/5);
-            }
-                document.getElementById("sum").value= result;
-        }
+            var kqElement = document.getElementById("kq");
+                if (tb>=9)
+                {
+                    document.getElementById("kq").innerHTML = "Hoc sinh xuat sac";
+                    document.getElementById("kq").style.color="yellow";
+                }
+                else if (tb>=8)
+                {
+                    document.getElementById("kq").innerHTML = "Hoc sinh gioi";
+                    document.getElementById("kq").style.color="red";
+                }
+                else if(tb>=7)
+                {
+                    document.getElementById("kq").innerHTML = "Hoc sinh kha";
+                    document.getElementById("kq").style.color="pink";
+                }
+                else 
+                {
+                    document.getElementById("kq").innerHTML = "Hoc sinh trung binh";
+                    document.getElementById("kq").style.color="black";
+                }
+                   
+            
+            // }
+            // var tb;
+            // if(value == 1)
+            // {
+            //     tb = ((hk1+(hk2*3))/3);
+            // }
+            // else if (value == 2)
+            // {
+            //     tb = ((hk1+(hk2*3))/4);
+            // }
+            // else if (value == 3)
+            // {
+            //     tb = ( (hk1 + (hk2*4))/5);
+            // }
+            
+            // document.getElementById("sum").value = tb;
+        }   
 
         function functionCancel()
         {
             document.getElementById("s1").value= "";
             document.getElementById("s2").value= "";
-            document.getElementById("sum").value= "";
+            document.getElementById("tb").value= "";
         }
     </script>
 

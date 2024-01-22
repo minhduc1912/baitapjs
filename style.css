@@ -1,6 +1,7 @@
-.wap
+/* .wap
 {
-    border: 1px solid red;
+    background-color: #B0B0B0	;
+    border: 3px solid red; 
     width: 500px;
     height: 500px;
     text-align: center;
@@ -9,3 +10,69 @@
 h3{
     color: blue;
 }
+
+
+#year
+{
+    color: red;
+}
+
+table{
+    width: 600px;
+    border-spacing: 0;
+    border: 1px solid #bbb;
+}
+#tbl tr{
+    height: 25px;
+}
+#tbl tr th, #tbl tr td{
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+#tbl tr:last-child td{
+    border: none;
+}
+ */
+
+
+
+*{
+    font-family: ' Arial, sans-serif';
+
+}
+
+.fclass {
+    display: flex;
+  }
+.first {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+  }
+
+  .ptag {
+    
+    font-weight: 600;
+    font-size: 22px;
+  }
+
+  .image {
+    width: 300px;
+    height: 600px;
+  }
+
+  #up-btn, #sub-btn {
+    background-color: rgba(92, 41, 233, 0.847);
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+
+  #up-btn:hover,#sub-btn:hover
+  {
+    background-color: #ccc;
+  }
+  
+ 
