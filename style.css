@@ -41,13 +41,13 @@ table{
 
 }
 
-.fclass {
+.frm {
     display: flex;
   }
 .first {
     display: flex;
     flex-direction: column;
-    margin-right: 40px;
+    margin-right: 35px;
   }
 
   .ptag {
@@ -75,4 +75,28 @@ table{
     background-color: #ccc;
   }
   
+ 
+ .vuong1
+ {
+  width: 30px;
+  height: 25px;
+  float: left;
+  border: 1px solid gray;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  background: yellow;
+ }
+
+  
+ .vuong2
+ {
+  width: 30px;
+  height: 25px;
+  float: left;
+  border: 1px solid gray;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  background: red;
+ }
+
  

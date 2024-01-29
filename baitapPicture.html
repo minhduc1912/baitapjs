@@ -9,7 +9,7 @@
   </head>
   <body>
 
-    <form action="" class="fclass" name="frm">
+    <form action="" class="frm" name="frm">
       <p class="first">
         Product Name:
         <input type="text" name="pname" id="pname" />
@@ -26,29 +26,31 @@
 
     <button type="button" id="up-btn" onclick="add()">Add</button>
     <p class="ptag">ĐIỆN THOẠI NỔI BẬT NHẤT</p>
-    <img src="" id="choosenImg" />
+    <img src="" id="chooseimg" />
 
-    <p id="displayName"></p>
-    <p id="displayPrice"></p>
+    <p id="dp"></p>
+    <p id="dp"></p>
 
     <button type="button" id="sub-btn">Submit</button>
     <script>
 
-      const add = () =>
+      function add ()
        {
         var pname = frm.pname.value
         var price = frm.price.value
         var upimg = document.getElementById('upimg')
-        var choosenImg = document.getElementById('choosenImg')
+        var chooseimg = document.getElementById('chooseimg')
         var reader = new FileReader()
         reader.readAsDataURL(upimg.files[0])
-        reader.onload = () => {
-          choosenImg.setAttribute('src', reader.result)
-          choosenImg.setAttribute('class', 'image')
+        reader.onload = () =>
+        {
+          chooseimg.setAttribute('src', reader.result)
+          chooseimg.setAttribute('class', 'image')
         }
-        document.getElementById('displayName').innerHTML = pname
-        document.getElementById('displayPrice').innerHTML = `${price}đ`
+        document.getElementById('dp').innerHTML = pname
+        document.getElementById('dp').innerHTML = `${price}đ`
       }
+      
     </script>
   </body>
 </html>

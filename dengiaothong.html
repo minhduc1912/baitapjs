@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traffic-light</title>
+</head>
+<style>
+
+button {
+
+  margin: 16px 40px;
+  padding: 1em 2em;
+  width: 200px;
+  font-size: 1.3em;
+  color: #DE9C02;
+  text-align: center;
+  border-radius: 2em;
+}
+
+
+.traffic-light {
+ 
+  margin: 30px 0;
+  padding: 20px;
+  width: 200px;
+  height: 550px;
+  background-color: black;
+  border-radius: 40px;
+}
+
+.bulb {
+  margin: 25px auto;
+  width: 150px;
+  height: 150px;
+  background-color: black;
+  border-radius: 50%;
+
+}
+</style>
+<body>
+  <div class="btn-color">
+    <button id="stopButton">Red</button>
+    <button id="slowButton">Yellow</button>
+    <button id="goButton">Green</button>
+  </div>
+
+  <div class="traffic-light">
+    <div id="stopLight" class="bulb"></div>
+    <div id="slowLight" class="bulb"></div>
+    <div id="goLight" class="bulb"></div>
+  </div>
+
+  <script>
+    document.getElementById("stopButton").onclick = lightRed;
+    document.getElementById("slowButton").onclick = lightYellow;
+    document.getElementById("goButton").onclick = lightGreen;
+
+function lightRed() {
+  clearLights();
+  document.getElementById('stopLight').style.backgroundColor = "red";
+}
+
+function lightYellow() {
+  clearLights();
+  document.getElementById('slowLight').style.backgroundColor = "yellow";
+}
+
+function lightGreen() {
+  clearLights();
+  document.getElementById('goLight').style.backgroundColor   = "green";
+}
+
+function clearLights() {
+  document.getElementById('stopLight').style.backgroundColor = "black";
+  document.getElementById('slowLight').style.backgroundColor = "black";
+  document.getElementById('goLight').style.backgroundColor   = "black";
+}
+  </script>
+</body>
+</html>
