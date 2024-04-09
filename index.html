@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quản lý Phòng Khách Sạn</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Quản lý Phòng Khách Sạn</h2>
+
+  <!-- Form để nhập dữ liệu -->
+  <form id="roomForm">
+    <label for="type">Loại phòng:</label>
+    <input type="text" id="type" name="type" required>
+    <label for="roomCode">Mã phòng:</label>
+    <input type="text" id="roomCode" name="roomCode" required>
+    <label for="image">Hình ảnh (URL):</label>
+    <input type="text" id="image" name="image">
+    <label for="price">Mức giá:</label>
+    <input type="number" id="price" name="price" min="0" required>
+    <button class= "btn-submit"type="submit">Thêm Phòng</button>
+  </form>
+
+  <!-- Bảng hiển thị dữ liệu -->
+  <table id="roomTable">
+    <thead>
+      <tr>
+        <th>Loại phòng</th>
+        <th>Mã phòng</th>
+        <th>Hình ảnh</th>
+        <th>Mức giá</th>
+        <th>Hành động</th>
+      </tr>
+    </thead>
+    <tbody id="roomData">
+    </tbody>
+  </table>
+</div>
+
+<script src="app.js"> </script>
+    
+    </body>
+    </html>
